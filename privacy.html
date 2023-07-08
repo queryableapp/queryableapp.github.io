@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy for Queryable</title>
+    <link rel="stylesheet" href="tailwind.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VEX6LLQEJB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VEX6LLQEJB');
+    </script>
+
+    <style>
+        .theme-color {
+            background-color: #CB1B45;
+        }
+
+        html, body {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+        }
+
+        #highlights, #privacy, #icloud {
+            background-color: #86C166;
+        }
+
+        #usage, #requirements, #index-building {
+            background-color: black;
+        }
+    </style>
+</head>
+<body class="theme-color">
+    <div class="container mx-auto py-16 px-6">
+        <h1 class="text-4xl md:text-5xl font-bold mb-8 text-center">Queryable Guide</h1>
+
+        <section id="highlights" class="mt-4 mb-4 bg-black p-4 rounded">
+            <h2 class="text-2xl font-bold mb-4 text-black">1. What's the highlights?</h2>
+            <p class="text-lg leading-relaxed text-black">
+                - You can use any description you remember to find the photo. For example, a scenario described in your mind (e.g. "photos of our gathering"), a tone (e.g. "kite in blue sky"), an object (e.g. "a dog, a girl, flower"), or even an emotion depicted in that photo (e.g. "We fell in love").<br>
+                - Queryable runs completely offline. This allows you not to worry about anyone invading your album privacy.
+            </p>
+        </section>
+
+        <section id="usage" class="mt-4 mb-4 bg-black p-4 rounded">
+            <h2 class="text-2xl font-bold mb-4 text-white">2. How to use Queryable?</h2>
+            <p class="text-lg leading-relaxed text-white">
+                - Build index<br>
+                The first time you run Queryable, it will build index for all your photos (remember to grant the app access to all your photos), which usually takes a few minutes (depending on the number of photos you have) and processes at a rate of about 2000 photos per minute. This step is performed only once.<br>
+                - Search as you like<br>
+                Once that's done, you can start searching for anything you want.<br>
+                - Manually update index<br>
+                When you have new photos, manually updating the index will make them searchable.
+            </p>
+        </section>
+
+        <section id="privacy" class="mt-4 mb-4 bg-black p-4 rounded">
+            <h2 class="text-2xl font-bold mb-4 text-black">3. Are there any privacy or security issues?</h2>
+            <p class="text-lg leading-relaxed text-black">
+                Rest assured, Queryable is designed as an offline app and will never request network access, thereby avoiding any privacy issues. (You can turn off its network permissions if you wish.)<br>
+                - Update: for version>=1.1.2, Queryable now gives users the option to choose whether to use wireless data to fetch photos from iCloud. This feature is not mandatory.<br>
+                As a Chinese indie developer who values privacy, it is very difficult to promote product in English speaking regions. But luckily, when it comes to this app, you don't have to believe me, you can trust science.
+            </p>
+        </section>
+
+        <section id="requirements" class="mt-4 mb-4 bg-black p-4 rounded">
+            <h2 class="text-2xl font-bold mb-4 text-white">4. Any requirements for the iPhone model?</h2>
+            <p class="text-lg leading-relaxed text-white">
+                Queryable runs CoreML locally, which means if your iPhone does not support CoreML, you can't use it.<br>
+                The limitations are:<br>
+                - MacOS 13.0 or above<br>
+                - M1 chips or later models
+            </p>
+        </section>
+
+        <section id="icloud" class="mt-4 mb-4 bg-black p-4 rounded">
+            <h2 class="text-2xl font-bold mb-4 text-black">5. Issues with iCloud</h2>
+            <p class="text-lg leading-relaxed text-black">
+                Since it cannot connect to a network, Queryable can only use the cache of the low-definition versions of your local Photos albums. This does not affect search accuracy, except that you cannot view the original image in the search results.<br>
+                It's a compromise between privacy and security and convenience. An app that has access to your Photos and the network is a disaster. I hope you can understand.
+            </p>
+        </section>
+
+        <section id="index-building" class="mt-4 mb-4 bg-black p-4 rounded">
+            <h2 class="text-2xl font-bold mb-4 text-white">6. What if it crashes when building an index?</h2>
+            <p class="text-lg leading-relaxed text-white">
+                Make sure you're MacOS 13.0, M1 chip or above. Turn off low battery mode and kill the memory-hungry app, then try building the index again.<br>
+                If there are still problems, please contact: myfancoo@gmail.com
+            </p>
+        </section>
+
+        <section id="footer" class="mt-12 text-center">
+            <a href="index.html" class="text-lg underline">Return to Home</a>
+        </section>
+    </div>
+</body>
+</html>

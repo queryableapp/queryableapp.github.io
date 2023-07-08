@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queryable: Find Photo by Text</title>
+    <link rel="stylesheet" href="tailwind.min.css">
+    <link rel="icon" type="image/png" href="imgs/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VEX6LLQEJB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VEX6LLQEJB');
+    </script>
+
+    <style>
+        .theme-color {
+            background-color: #CB1B45;
+        }
+
+        html, body {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+        }
+
+        .bg-word-1 {
+            background-color: #47FF9C;
+            padding: 0.2em 0.4em;
+<!--            border-radius: 5px;-->
+        }
+
+        .bg-word-2 {
+            background-color: #FBFC76;
+            padding: 0.2em 0.4em;
+<!--            border-radius: 5px;-->
+        }
+
+        .bg-word-3 {
+            background-color: #9EFFFF;
+            padding: 0.2em 0.4em;
+<!--            border-radius: 5px;-->
+        }
+
+    </style>
+</head>
+<body class="theme-color flex flex-col h-screen">
+    <header class="container mx-auto px-6 py-4">
+        <div class="flex justify-center items-center">
+            <img src="imgs/favicon.png" alt="Avatar" class="w-24 h-24 rounded-xl mr-4">
+            <h1 id="title" class="text-4xl md:text-5xl font-bold mb-4 mt-8 shadow-text">Queryable: Find Photo by Text</h1>
+        </div>
+
+        <p id="subtitle" class="text-lg mb-8 text-center">
+            <span id="subtitle_part1" class="bg-word-1">Offline,</span>
+            <span id="subtitle_part2" class="bg-word-2">semantic search,</span>
+            <span id="subtitle_part3" class="bg-word-3">with any keywords.</span>
+        </p>
+
+
+        <div class="bg-black bg-opacity-90 p-4 rounded-lg mb-4 max-w-4xl mx-auto flex flex-col">
+            <p id="description" class="text-lg text-white mb-2">
+                Queryable is a Core ML model that runs locally on your device. Leveraging OpenAI CLIP's model encoding technology to connect images and text, you can search your iPhone photo album using any natural language input. Most importantly, it is completely offline, so your album privacy will not be revealed to anyone.
+            </p>
+            <p id="signature" class="text-lg text-white self-end">—— Queryable Team (actually just one man)</p>
+        </div>
+
+
+
+
+
+
+    </header>
+
+
+<!--    <section id="features" class="container mx-auto flex-grow">-->
+<!--        <div class="grid grid-cols-1 gap-2 h-full items-center">-->
+<!--            <video src="imgs/DoloresWithBorder.mp4" autoplay loop playsinline class="w-4/5 mx-auto items-center" style="max-width: 400px; max-height: 400px;" controls></video>-->
+<!--        </div>-->
+<!--    </section>-->
+
+<section id="features" class="container mx-auto flex-grow mb-5">
+    <div class="flex flex-col sm:flex-row items-center justify-around space-x-4 sm:space-x-0">
+        <img src="imgs/1.png" alt="Screenshot 2" class="shadow-lg w-3/5 sm:w-1/5 h-auto mx-auto sm:mx-0 mb-4 sm:mb-0">
+        <img src="imgs/3.png" alt="Screenshot 2" class="shadow-lg w-3/5 sm:w-1/5 h-auto mx-auto sm:mx-0 mb-4 sm:mb-0">
+        <img src="imgs/4.png" alt="Screenshot 2" class="shadow-lg w-3/5 sm:w-1/5 h-auto mx-auto sm:mx-0 mb-4 sm:mb-0">
+        <img src="imgs/5.png" alt="Screenshot 2" class="shadow-lg w-3/5 sm:w-1/5 h-auto mx-auto sm:mx-0 mb-4 sm:mb-0">
+        <img src="imgs/6.png" alt="Screenshot 2" class="shadow-lg w-3/5 sm:w-1/5 h-auto mx-auto sm:mx-0 mb-4 sm:mb-0">
+<!--        <div class="h-full w-3/5 sm:w-1/5 mx-auto sm:mx-0 flex items-center justify-center mb-4 sm:mb-0">-->
+<!--            <video src="imgs/final.mp4" autoplay loop playsinline class="h-auto w-full" controls></video>-->
+<!--        </div>-->
+    </div>
+</section>
+
+
+
+
+
+    <footer class="container mx-auto px-6 py-8 text-center">
+        <a href="https://apps.apple.com/us/app/queryable-find-photo-by-text/id1661598353?platform=iphone" class="bg-black py-3 px-8 rounded text-white">Download</a>
+        <div class="flex justify-center space-x-6 mt-6">
+<!--            <a href="https://discord.gg/pgt4MnFCw4" target="_blank" class="text-white"><i class="fab fa-discord"></i></a>-->
+            <a href="https://twitter.com/immazzystar" target="_blank" class="text-white"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <footer class="theme-color shadow-md py-6 bg-center">
+        <div class="flex justify-center items-center">
+            <p class="text-center text-white mr-2">&copy; 2023 Queryable App. All rights reserved.</p>
+            <a href="privacy.html" class="text-white underline">Privacy Policy</a>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>
+
