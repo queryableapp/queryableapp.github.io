@@ -47,7 +47,12 @@
 
     </style>
 </head>
-<body class="theme-color flex flex-col h-screen">
+<body class="theme-color flex flex-col h-screen relative">
+    <div class="absolute top-2 right-2">
+        <a href="https://github.com/mazzzystar/Queryable" target="_blank">
+            <i class="fab fa-github text-3xl"></i>
+        </a>
+    </div>
     <header class="container mx-auto px-6 py-4">
         <div class="flex justify-center items-center">
             <img src="imgs/favicon.png" alt="Avatar" class="w-24 h-24 rounded-xl mr-4">
@@ -87,7 +92,7 @@
 
     <footer class="theme-color shadow-md py-6 bg-center">
         <div class="flex justify-center items-center">
-            <p id="footer" class="text-center text-white mr-2">&copy; 2023 Queryable App. All rights reserved.</p>
+            <p class="text-center text-white mr-2">&copy; 2023 Queryable App. All rights reserved.</p>
             <a id="privacy" href="privacy.html" class="text-white underline">Privacy Policy</a>
         </div>
     </footer>
@@ -100,9 +105,8 @@
             'subtitle_part1': 'Offline,',
             'subtitle_part2': 'semantic search,',
             'subtitle_part3': 'with any keywords.',
-            'description': `Queryable is a Core ML model that runs locally on your device. Leveraging OpenAI CLIP's model encoding technology to connect images and text, you can search your iPhone photo album using any natural language input. Most importantly, it is completely offline, so your album privacy will not be revealed to anyone.`,
+            'description': `Queryable is a Core ML model that runs locally on your device. Leveraging OpenAI CLIP's model encoding technology to connect images and text, you can search your iPhone photo album using any natural language input. Most importantly, it is completely offline, so your album privacy will not be revealed to anyone. And, it is open-source:  <a href="https://github.com/mazzzystar/Queryable" style="text-decoration: underline;">GitHub</a>`,
             'signature': '—— Queryable Team (actually just one man)',
-            'footer': '&copy; 2023 Queryable App. All rights reserved.',
             'privacy': 'Privacy Policy',
             'download': {
                 'text': 'Download',
@@ -114,9 +118,8 @@
             'subtitle_part1': '离线，',
             'subtitle_part2': '语义搜索，',
             'subtitle_part3': '使用任何关键词。',
-            'description': `寻隐是一款可以在您的设备上本地运行的Core ML模型。利用OpenAI CLIP的模型编码技术将图像和文本相连接，您可以使用任何自然语言输入在iPhone的相册中进行搜索。最重要的是，它完全离线，所以您的相册隐私不会泄露给任何人。`,
+            'description': `寻隐是一款可以在您的设备上本地运行的Core ML模型。利用OpenAI CLIP的模型编码技术将图像和文本相连接，您可以使用任何自然语言输入在iPhone的相册中进行搜索。最重要的是，它完全离线，所以您的相册隐私不会泄露给任何人。并且，它是开源的: <a href="https://github.com/mazzzystar/Queryable" style="text-decoration: underline;">GitHub</a>`,
             'signature': '—— 寻隐团队（实际上只有一个人）',
-            'footer': '&copy; 2023 寻隐应用。保留所有权利。',
             'privacy': '隐私政策',
             'download': {
                 'text': '下载',
@@ -133,9 +136,9 @@
         document.getElementById('subtitle_part1').textContent = translations[lang].subtitle_part1;
         document.getElementById('subtitle_part2').textContent = translations[lang].subtitle_part2;
         document.getElementById('subtitle_part3').textContent = translations[lang].subtitle_part3;
-        document.getElementById('description').textContent = translations[lang].description;
+        document.getElementById('description').innerHTML = translations[lang].description;
         document.getElementById('signature').textContent = translations[lang].signature;
-        document.getElementById('footer').textContent = translations[lang].footer;
+<!--        document.getElementById('footer').textContent = translations[lang].footer;-->
         document.getElementById('privacy').textContent = translations[lang].privacy;
 
         var downloadBtn = document.getElementById('download');
