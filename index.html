@@ -233,7 +233,6 @@
         document.getElementById('subtitle_part3').textContent = translations[lang].subtitle_part3;
         document.getElementById('description').innerHTML = translations[lang].description;
         document.getElementById('signature').textContent = translations[lang].signature;
-<!--        document.getElementById('footer').textContent = translations[lang].footer;-->
         document.getElementById('privacy').textContent = translations[lang].privacy;
 
         var downloadBtn = document.getElementById('download');
@@ -248,6 +247,7 @@
             for (var i = 0; i < imgs.length; i++) {
                 if (imgs[i].src.indexOf('imgs/') !== -1) {
                     imgs[i].src = imgs[i].src.replace(".jpg", "-cn.jpg");
+                    imgs[i].srcset = imgs[i].srcset.replace("small.jpg", "small-cn.jpg").replace("medium.jpg", "medium-cn.jpg").replace("large.jpg", "large-cn.jpg");
                 }
             }
         }
@@ -262,13 +262,13 @@
         }
 
     }
-
     window.onload = function() {
         var userLang = navigator.language || navigator.userLanguage;
         userLang = userLang.substr(0,2);
         setLanguage(userLang);
     }
     </script>
+
 
 
 </body>
