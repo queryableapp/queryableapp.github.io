@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Queryable is a powerful app that lets you search your photo album using natural language input, running entirely offline.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="title2">Queryable: Find Photo by Text</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="tailwind.min.css">
-    <link rel="icon" type="image/png" href="imgs/favicon.png" />
+    <link rel="icon" type="image/png" href="imgs/favicon.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -55,7 +57,7 @@
     </div>
     <header class="container mx-auto px-6 py-4">
         <div class="flex justify-center items-center">
-            <img src="imgs/favicon.png" alt="Avatar" class="w-24 h-24 rounded-xl mr-4">
+            <img src="imgs/favicon.jpg" alt="Avatar" class="w-24 h-24 rounded-xl mr-4">
             <h1 id="title" class="text-4xl md:text-5xl font-bold mb-4 mt-8 shadow-text">Queryable: Find Photo by Text</h1>
         </div>
 
@@ -75,13 +77,43 @@
 
     <section id="features" class="container mx-auto flex-grow mb-5">
         <div class="flex flex-col sm:flex-row items-center justify-around space-x-4 sm:space-x-0">
-            <img src="imgs/1.png" alt="Screenshot 2" class="shadow-lg w-4/5 sm:w-1/5 h-auto mx-auto sm:mx-0 mb-4 sm:mb-0">
-            <img src="imgs/3.png" alt="Screenshot 2" class="shadow-lg w-4/5 sm:w-1/5 h-auto mx-auto sm:mx-0 mb-4 sm:mb-0">
-            <img src="imgs/4.png" alt="Screenshot 2" class="shadow-lg w-4/5 sm:w-1/5 h-auto mx-auto sm:mx-0 mb-4 sm:mb-0">
-            <img src="imgs/5.png" alt="Screenshot 2" class="shadow-lg w-4/5 sm:w-1/5 h-auto mx-auto sm:mx-0 mb-4 sm:mb-0">
-            <img src="imgs/6.png" alt="Screenshot 2" class="shadow-lg w-4/5 sm:w-1/5 h-auto mx-auto sm:mx-0 mb-4 sm:mb-0">
+            <img src="imgs/1-small.jpg"
+                srcset="imgs/1-small.jpg 300w, imgs/1-medium.jpg 768w, imgs/1-large.jpg 1280w"
+                sizes="(max-width: 300px) 100vw, (max-width: 768px) 50vw, 25vw"
+                alt="Detailed app view screenshot 1"
+                class="shadow-lg w-4/5 sm:w-1/5 h-auto mx-auto sm:mx-0 mb-4 sm:mb-0"
+                loading="lazy">
+            <img src="imgs/3-small.jpg"
+                srcset="imgs/3-small.jpg 300w, imgs/3-medium.jpg 768w, imgs/3-large.jpg 1280w"
+                sizes="(max-width: 300px) 100vw, (max-width: 768px) 50vw, 25vw"
+                alt="Detailed app view screenshot 2"
+                class="shadow-lg w-4/5 sm:w-1/5 h-auto mx-auto sm:mx-0 mb-4 sm:mb-0"
+                loading="lazy">
+            <img src="imgs/4-small.jpg"
+                srcset="imgs/4-small.jpg 300w, imgs/4-medium.jpg 768w, imgs/4-large.jpg 1280w"
+                sizes="(max-width: 300px) 100vw, (max-width: 768px) 50vw, 25vw"
+                alt="Detailed app view screenshot 3"
+                class="shadow-lg w-4/5 sm:w-1/5 h-auto mx-auto sm:mx-0 mb-4 sm:mb-0"
+                loading="lazy">
+            <img src="imgs/5-small.jpg"
+                srcset="imgs/5-small.jpg 300w, imgs/5-medium.jpg 768w, imgs/5-large.jpg 1280w"
+                sizes="(max-width: 300px) 100vw, (max-width: 768px) 50vw, 25vw"
+                alt="Detailed app view screenshot 4"
+                class="shadow-lg w-4/5 sm:w-1/5 h-auto mx-auto sm:mx-0 mb-4 sm:mb-0"
+                loading="lazy">
+            <img src="imgs/6-small.jpg"
+                srcset="imgs/6-small.jpg 300w, imgs/6-medium.jpg 768w, imgs/6-large.jpg 1280w"
+                sizes="(max-width: 300px) 100vw, (max-width: 768px) 50vw, 25vw"
+                alt="Detailed app view screenshot 5"
+                class="shadow-lg w-4/5 sm:w-1/5 h-auto mx-auto sm:mx-0 mb-4 sm:mb-0"
+                loading="lazy">
         </div>
     </section>
+
+
+    <div id="performance-note" class="container mx-auto text-center mt-0 hidden">
+        <p id="performance-text" class="p-4 rounded-lg mb-4 max-w-4xl mx-auto text-sm text-gray-500"></p>
+    </div>
 
     <footer class="container mx-auto px-6 py-8 text-center">
         <a id="download" href="https://apps.apple.com/us/app/queryable-find-photo-by-text/id1661598353?platform=iphone" class="bg-black py-3 px-8 rounded text-white">Download</a>
@@ -93,7 +125,7 @@
 
     <footer class="theme-color shadow-md py-6 bg-center">
         <div class="flex justify-center items-center">
-            <p class="text-center text-black mr-2">This project is <a href="https://github.com/mazzzystar/Queryable" class="text-white underline">available</a> under MIT license.</p>
+            <p class="text-center text-black mr-2 opensource-statement">This project is <a href="https://github.com/mazzzystar/Queryable" class="text-white underline">available</a> under MIT license.</p>
             <a id="privacy" href="privacy.html" class="text-black">Privacy Policy</a>
         </div>
     </footer>
@@ -109,6 +141,7 @@
             'description': `Queryable is a Core ML model that runs locally on your device. Leveraging OpenAI CLIP's model encoding technology to connect images and text, you can search your iPhone photo album using any natural language input. Most importantly, it is completely offline, so your album privacy will not be revealed to anyone. And, it is open-source:  <a href="https://github.com/mazzzystar/Queryable" style="text-decoration: underline;">GitHub</a>`,
             'signature': '—— Queryable Team (actually just one man)',
             'privacy': 'Privacy Policy',
+            'opensource_statement': 'This project is <a href="https://github.com/mazzzystar/Queryable" class="text-white underline">available</a> under MIT license.',
             'download': {
                 'text': 'Download',
                 'link': 'https://apps.apple.com/us/app/queryable-find-photo-by-text/id1661598353?platform=iphone'
@@ -122,11 +155,72 @@
             'description': `寻隐是一款可以在您的设备上本地运行的Core ML模型。利用OpenAI CLIP的模型编码技术将图像和文本相连接，您可以使用任何自然语言输入在iPhone的相册中进行搜索。最重要的是，它完全离线，所以您的相册隐私不会泄露给任何人。并且，它是开源的: <a href="https://github.com/mazzzystar/Queryable" style="text-decoration: underline;">GitHub</a>`,
             'signature': '—— 寻隐团队（实际上只有一个人）',
             'privacy': '隐私政策',
+            'opensource_statement': '本项目代码以 MIT 证书 <a href="https://github.com/mazzzystar/Queryable" class="text-white underline">开源</a>。',
             'download': {
                 'text': '下载',
                 'link': 'https://apps.apple.com/cn/app/%E5%AF%BB%E9%9A%90-%E7%94%A8%E6%96%87%E5%AD%97%E6%89%BE%E7%85%A7%E7%89%87/id1664361663?platform=iphone'
             }
-        }
+        },
+        'fr': {
+            'title': 'Queryable : Trouvez une photo par texte',
+            'subtitle_part1': 'Hors ligne,',
+            'subtitle_part2': 'recherche sémantique,',
+            'subtitle_part3': 'avec n\'importe quels mots-clés.',
+            'description': `Queryable est un modèle Core ML qui s'exécute localement sur votre appareil. En tirant parti de la technologie d'encodage de modèle OpenAI CLIP pour connecter les images et le texte, vous pouvez rechercher votre album photo iPhone en utilisant n'importe quelle entrée de langue naturelle. Le plus important, c'est qu'il est entièrement hors ligne, donc votre vie privée d'album ne sera révélée à personne. Et c'est open source : <a href="https://github.com/mazzzystar/Queryable" style="text-decoration: underline;">GitHub</a>`,
+            'signature': '—— Équipe Queryable (en réalité juste un homme)',
+            'privacy': 'Politique de confidentialité',
+            'opensource_statement': 'Ce projet est <a href="https://github.com/mazzzystar/Queryable" class="text-white underline">disponible</a> sous licence MIT.',
+            'performance_note': 'Queryable est formé sur un modèle en anglais, alors essayez d\'utiliser l\'anglais pour de meilleures performances.',
+            'download': {
+                'text': 'Télécharger',
+                'link': 'https://apps.apple.com/fr/app/queryable-find-photo-by-text/id1661598353?platform=iphone'
+            }
+        },
+        'de': {
+            'title': 'Queryable: Foto durch Text finden',
+            'subtitle_part1': 'Offline,',
+            'subtitle_part2': 'semantische Suche,',
+            'subtitle_part3': 'mit beliebigen Schlüsselwörtern.',
+            'description': `Queryable ist ein Core ML-Modell, das lokal auf Ihrem Gerät ausgeführt wird. Mit der Modellkodierungstechnologie von OpenAI CLIP, die Bilder und Text verbindet, können Sie Ihr iPhone-Fotoalbum mit beliebigen natürlichen Spracheingaben durchsuchen. Am wichtigsten ist, dass es vollständig offline ist, sodass Ihre Album-Privatsphäre niemandem preisgegeben wird. Und es ist Open Source: <a href="https://github.com/mazzzystar/Queryable" style="text-decoration: underline;">GitHub</a>`,
+            'signature': '—— Queryable Team (tatsächlich nur ein Mann)',
+            'privacy': 'Datenschutz-Bestimmungen',
+            'opensource_statement': 'Dieses Projekt ist <a href="https://github.com/mazzzystar/Queryable" class="text-white underline">verfügbar</a> unter der MIT-Lizenz.',
+            'download': {
+                'text': 'Herunterladen',
+                'link': 'https://apps.apple.com/de/app/queryable-find-photo-by-text/id1661598353?platform=iphone'
+            }
+        },
+        'es': {
+            'title': 'Queryable: Encuentra foto por texto',
+            'subtitle_part1': 'Sin conexión,',
+            'subtitle_part2': 'búsqueda semántica,',
+            'subtitle_part3': 'con cualquier palabra clave.',
+            'description': `Queryable es un modelo de Core ML que se ejecuta localmente en tu dispositivo. Aprovechando la tecnología de codificación de modelos de OpenAI CLIP para conectar imágenes y texto, puedes buscar en tu álbum de fotos de iPhone utilizando cualquier entrada de lenguaje natural. Lo más importante es que es completamente offline, por lo que la privacidad de tu álbum no se revelará a nadie.`,
+            'signature': '—— Equipo de Queryable (en realidad solo un hombre)',
+            'privacy': 'Política de privacidad',
+            'opensource_statement': 'Este proyecto está <a href="https://github.com/mazzzystar/Queryable" class="text-white underline">disponible</a> bajo licencia MIT.',
+            'performance_note': 'Queryable está entrenado en un modelo en inglés, así que intenta usar inglés para un mejor rendimiento.',
+            'download': {
+                'text': 'Descargar',
+                'link': 'https://apps.apple.com/es/app/queryable-find-photo-by-text/id1661598353?platform=iphone'
+            }
+        },
+        'pt': {
+            'title': 'Queryable: Encontre foto por texto',
+            'subtitle_part1': 'Offline,',
+            'subtitle_part2': 'busca semântica,',
+            'subtitle_part3': 'com qualquer palavra-chave.',
+            'description': `Queryable é um modelo Core ML que roda localmente no seu dispositivo. Aproveitando a tecnologia de codificação de modelo OpenAI CLIP para conectar imagens e texto, você pode pesquisar seu álbum de fotos do iPhone usando qualquer entrada de linguagem natural. Mais importante ainda, é completamente offline, portanto, a privacidade do seu álbum não será revelada a ninguém.`,
+            'signature': '—— Equipe Queryable (na verdade, apenas um homem)',
+            'privacy': 'Política de Privacidade',
+            'opensource_statement': 'Este projeto está <a href="https://github.com/mazzzystar/Queryable" class="text-white underline">disponível</a> sob a licença MIT.',
+            'performance_note': 'Queryable é treinado em um modelo em inglês, então tente usar o inglês para um melhor desempenho.',
+            'download': {
+                'text': 'Baixar',
+                'link': 'https://apps.apple.com/pt/app/queryable-find-photo-by-text/id1661598353?platform=iphone'
+            }
+        },
+
     }
     </script>
 
@@ -145,6 +239,28 @@
         var downloadBtn = document.getElementById('download');
         downloadBtn.href = translations[lang].download.link;
         downloadBtn.textContent = translations[lang].download.text;
+        var openSourceStatement = document.querySelector(".opensource-statement");
+        openSourceStatement.innerHTML = translations[lang].opensource_statement;
+
+        // Change images if the language is Chinese
+        if (lang === 'zh') {
+            var imgs = document.querySelectorAll("img");
+            for (var i = 0; i < imgs.length; i++) {
+                if (imgs[i].src.indexOf('imgs/') !== -1) {
+                    imgs[i].src = imgs[i].src.replace(".jpg", "-cn.jpg");
+                }
+            }
+        }
+
+        var performanceDiv = document.getElementById('performance-note');
+        var performanceText = document.getElementById('performance-text');
+        if (lang === 'en' || lang === 'zh') {
+            performanceDiv.classList.add('hidden');
+        } else {
+            performanceDiv.classList.remove('hidden');
+            performanceText.textContent = translations[lang].performance_note;
+        }
+
     }
 
     window.onload = function() {
