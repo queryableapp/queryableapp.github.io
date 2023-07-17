@@ -135,6 +135,7 @@
     var translations = {
         'en': {
             'title': 'Queryable: Find Photo by Text',
+            'title2': '寻隐：通过文字查找照片',
             'subtitle_part1': 'Offline,',
             'subtitle_part2': 'semantic search,',
             'subtitle_part3': 'with any keywords.',
@@ -148,7 +149,8 @@
             }
         },
         'zh': {
-            'title': '寻隐：通过文字查找照片',
+            'title': '寻隐：用文字找照片',
+            'title2': '寻隐：用文字找照片',
             'subtitle_part1': '离线，',
             'subtitle_part2': '语义搜索，',
             'subtitle_part3': '使用任何关键词。',
@@ -228,6 +230,7 @@
     function setLanguage(lang) {
         if (!translations[lang]) return;
         document.getElementById('title').textContent = translations[lang].title;
+        document.getElementById('title2').textContent = translations[lang].title2;
         document.getElementById('subtitle_part1').textContent = translations[lang].subtitle_part1;
         document.getElementById('subtitle_part2').textContent = translations[lang].subtitle_part2;
         document.getElementById('subtitle_part3').textContent = translations[lang].subtitle_part3;
